@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Theme settings",
+    "settings": [
+      {
+        "type": "header",
+        "content": "JellyFlow Shopify Theme Settings"
+      }
+    ]
+  }
+]
