@@ -1,0 +1,35 @@
+{% schema %}
+{
+  "name": "Announcement bar",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Announcement text",
+      "default": "Welcome to JellyFlow! Free shipping on all orders!"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background color",
+      "default": "#0072f5"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    }
+  ]
+}
+{% endschema %}
+
+<div style="
+  background: {{ section.settings.background }};
+  color: {{ section.settings.text_color }};
+  text-align: center;
+  font-weight: 600;
+  padding: 0.5rem 0;
+">
+  {{ section.settings.text }}
+</div>
