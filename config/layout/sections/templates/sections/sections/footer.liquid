@@ -1,0 +1,48 @@
+Copilot said: Awesome! Let’s add the **footer section** now,
+Awesome! Let’s add the footer section now, which is essential for every Shopify theme.
+
+5️⃣ File: sections/footer.liquid
+In GitHub:
+Click Add file → Create new file
+
+File name:
+
+Code
+sections/footer.liquid
+Paste this code:
+
+Liquid
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "footer_text",
+      "label": "Footer text",
+      "default": "© 2026 JellyFlow. All rights reserved."
+    },
+    {
+      "type": "url",
+      "id": "instagram",
+      "label": "Instagram URL",
+      "default": "https://instagram.com"
+    },
+    {
+      "type": "url",
+      "id": "facebook",
+      "label": "Facebook URL",
+      "default": "https://facebook.com"
+    }
+  ]
+}
+{% endschema %}
+
+<footer style="background:#232339; color:#fff; padding:2rem 1rem; text-align:center; margin-top:3rem;">
+  <div style="margin-bottom:1rem;">{{ section.settings.footer_text }}</div>
+  <div>
+    <a href="{{ section.settings.instagram }}" style="color:#fff; margin:0 0.5rem;" target="_blank" rel="noopener">Instagram</a>
+    |
+    <a href="{{ section.settings.facebook }}" style="color:#fff; margin:0 0.5rem;" target="_blank" rel="noopener">Facebook</a>
+  </div>
+</footer>
